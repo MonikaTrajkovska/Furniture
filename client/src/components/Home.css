@@ -1,0 +1,37 @@
+
+
+body{
+  background-color:white ;
+  width: 100px;
+  height: 100px;
+}
+.header{
+
+  border-radius: 25px;
+  border: 2px ridge grey;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 550px;
+    padding: 30px;
+
+}
+.title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  text-decoration-color: black;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 20px;
+  
+}
+.title1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}

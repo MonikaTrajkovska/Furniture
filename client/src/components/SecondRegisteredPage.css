@@ -1,0 +1,28 @@
+.registered-page{
+    width: 700px;
+    margin-top: 300px;
+    margin-left: 500px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 3.00;
+    font-family: Roboto, sans-serif;
+}
+.continue-button2{
+    font-size: 20px;
+    color: #fff;
+    background: #999999;
+    height: 40px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.17);
+    /* width: 100%; */
+    /* padding: 30px 205px 40px 250px; */
+    padding: 10px 20px 30px 20px;
+    height: 45px;
+    margin-left: 450px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    border: none;
+    text-transform: uppercase;
+}

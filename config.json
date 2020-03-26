@@ -1,0 +1,17 @@
+{
+    "db": {
+      "host": "cluster0-r2fa9.mongodb.net",
+      "dbname": "item",
+      "username": "dev",
+      "password": "DEV123!"
+     
+    
+      
+      
+    },
+
+    "jwt": {
+      "key": "kluch"
+    }
+   
+}

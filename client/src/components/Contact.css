@@ -1,0 +1,26 @@
+.contact{
+  margin-top: 200px;
+  margin-left: 80px;
+  width: 520px;
+  height: 550px;
+  padding-top: 50px;
+ 
+}
+.contact1{
+    /* border-top: 1px solid grey; */
+    border-bottom: 1px solid grey;
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.643;
+    font-family: Roboto, sans-serif;
+}
+
+.contact1 h2{
+    margin-bottom: 50px;
+    font-family: Roboto, sans-serif;
+}
+
+.contactParagraph{
+    padding-bottom: 20px;
+}
