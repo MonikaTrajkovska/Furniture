@@ -1,8 +1,8 @@
-import React from './node_modules/react'
+import React from 'react'
 import './Header.css'
 import Logo from './assets/images/furniture-logo.png'
 
-import { Link } from './node_modules/react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Header =()=>{
     return(

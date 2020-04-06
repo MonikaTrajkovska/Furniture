@@ -1,7 +1,7 @@
-import React from './node_modules/react'
-import {Link} from './node_modules/react-router-dom'
-import {Redirect} from './node_modules/react-router-dom'
-import axios from './node_modules/axios'
+import React from 'react'
+import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
+import axios from 'axios'
 //  import { render } from '@testing-library/react'
 import './Register.css'
 
@@ -51,7 +51,7 @@ register=(event)=>{
             this.state.city != null 
              ){
                  event.preventDefault()
-                axios.post('http://127.0.0.1:8085/api/v1/auth/register',{
+                axios.post('http://127.0.0.1:8080/api/v1/auth/register',{
                     name:this.state.name,
                     surname:this.state.surname,
                     email:this.state.email,
@@ -64,7 +64,7 @@ register=(event)=>{
                 })
                 .then(res=>{
                     console.log(res)
-                    axios.post('http://127.0.0.1:8085/api/v1/auth/login', {
+                    axios.post('http://127.0.0.1:8080/api/v1/auth/login', {
                      email: this.state.email,
                      password: this.state.password
                  })

@@ -1,6 +1,6 @@
-import React from './node_modules/react'
-import axios from './node_modules/axios'
-import { render } from './node_modules/@testing-library/react'
+import React from 'react'
+import axios from 'axios'
+import { render } from 'react'
 
 
 class Login extends React.Component{
@@ -27,14 +27,14 @@ class Login extends React.Component{
 )
 {
     event.preventDefault()
-    axios.post('http://127.0.0.1:8085/api/v1/auth/login', {
+    axios.post('http://127.0.0.1:8080/api/v1/auth/login', {
         email: this.state.email,
         password: this.state.password
     })
     .then(res=>{
         localStorage.setItem('jwt', res.data.jwt);
-        localStorage.setItem('name', res.data.first_name);
-        localStorage.setItem('lastName', res.data.last_name);
+        localStorage.setItem('name', res.data.name);
+        localStorage.setItem('lastName', res.data.surname);
       
       
     })
@@ -56,7 +56,7 @@ render(){
         <input type="password" className="text-field1" id="password" onChange={this.saveValue} />
         <br/>
      
-                            <button className='continue-button'>Continue</button>
+                            <button className='continue-button' onClick={this.login}>Log in</button>
         </div>
         </React.Fragment>
     )

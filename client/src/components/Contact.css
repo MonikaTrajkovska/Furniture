@@ -9,7 +9,7 @@
 .contact1{
     /* border-top: 1px solid grey; */
     border-bottom: 1px solid grey;
-    margin-top: 20px;
+    margin-top: 50px;
     font-weight: 300;
     font-size: 16px;
     line-height: 1.643;
@@ -17,10 +17,21 @@
 }
 
 .contact1 h2{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     font-family: Roboto, sans-serif;
 }
 
 .contactParagraph{
     padding-bottom: 20px;
+}
+.showLocation{
+    /* display: flex; */
+    margin-left: 950px;
+    margin-top: -180px;
+    font-family: Roboto, sans-serif;
+    color: #5e606c;
+    /* height: 150px;
+    width: 550px; */
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }

@@ -1,4 +1,4 @@
-import React from './node_modules/react'
+import React from 'react'
 import './Firstpage.css'
 import FurniturePicture from './assets/images/FurniturePicture.JPEG'
 import Furniture from './assets/images/furniture.JPEG'

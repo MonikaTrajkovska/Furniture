@@ -1,7 +1,9 @@
-import React from '.react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './Home.css'
 import Logo from './assets/images/furniture-logo.png'
+// import {Image} from 'react';
+// import moni from '../../public/uploads/download.jpg'
 const Home = () => {
   
     return (
@@ -13,7 +15,11 @@ const Home = () => {
            <img src={Logo} alt="Logo"/>
           <h1 className='title'>MM</h1> 
           <h2 className='title1'>Furniture</h2>
-           
+            {/* <img
+          
+          //{uri: this.getImage(item.teampicture1)}
+          src={moni} alt=''
+        />    */}
            </div>
               
            

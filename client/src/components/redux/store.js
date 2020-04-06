@@ -1,9 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import logger from 'redux-logger'
-import { itemsReducer } from './reducers/itemsReducer'
+import { furnitureReducers } from './reducers/furnitureReducers'
 
 const singleReducer = combineReducers({
-    itemsReducer,
+    furnitureReducers,
 })
 
 // Create an epmty store object

@@ -1,9 +1,9 @@
-import React from './node_modules/react'
+import React from 'react'
 import Dinningimage from './assets/images/Dinningimage.JPEG'
 import Table from './assets/images/table.JPEG'
 // import Clock from './assets/images/clock.JPEG'
 import './About.css'
-import { Link } from './node_modules/react-router-dom'
+import { Link } from 'react-router-dom'
 
 const About =()=>{
     return(

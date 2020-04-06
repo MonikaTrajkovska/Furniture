@@ -20,6 +20,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
     "bcryptjs": "^2.4.3",
+    "blob": "^0.1.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-fileupload": "^1.1.6",
@@ -29,5 +30,8 @@
     "mongoose": "^5.7.8",
     "node-input-validator": "^4.1.0",
     "randomstring": "^1.1.5"
+  },
+  "devDependencies": {
+    "file-loader": "^6.0.0"
   }
 }
