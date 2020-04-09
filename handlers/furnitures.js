@@ -1,25 +1,68 @@
 const express=require('express')
 const Furniture=require('../models/Furniture.js')
 
-const getAll=(req,res)=>{
-    Furniture.getAll()
-    .then(data=>{
-        res.status(200).send(data)
-    })
-    .catch(err=>{
-        res.status(500).send(err)
-    })
+const getAll = (req, res) => {
+    console.log(req.query)
+    let q = {}
+    let sort = {}
+    if (req.query.name != undefined) {
+    q.name = req.query.name 
+     }
+    // if (req.query.godina_from != undefined) {
+    //     if (q.godina == undefined) {
+    //         q.godina = {}
+    //     }
+    //     q.godina.$gte = new Date(Number(req.query.godina_from))
+
+    // }
+    // if (req.query.godina_to != undefined) {
+    //     if (q.godina == undefined) {
+    //         q.godina = {}
+    //     }
+    //     q.godina.$lt = new Date(Number(req.query.godina_to))
+
+    // }
+    // if (req.query.sort != undefined) {
+    //     let sortable = ["name"]
+    //     let sq = req.query.sort.split(":")
+    //     if (sortable.indexOf(sq[0]) > -1) {         //vraka na koja pozicija se naoga                                                     soritiraniot element
+    //         sort[sq[0]] = sq[1] == 'name' ? -1 : 1
+    //     }
+
+    // }
+
+    Furniture.getAll(q, sort)
+        .then(data => {
+            res.status(200).send(data);
+        })
+        .catch(err => {
+            res.status(500).send(err);
+        });
+}
+//   const getAll=(req,res)=>{
+//       name=req.params.name
+//       console.log(name)
+//      Furniture.getAll((name))
+//     .then(data=>{
+//          res.status(200).send(data)
+//     })
+//      .catch(err=>{
+//          res.status(500).send(err)
+//     })
+//  }
+
+const getOne = (req, res) => {
+    Furniture.getOne(req.params.id, req.user.id)
+        .then(data => {
+            res.status(200).send(data);
+        })
+        .catch(err => {
+            res.status(500).send(err);
+        });
 }
 
-const getOne=(req,res)=>{
-    Furniture.getOne(req.params.id,req.user.id)
-    .then(data=>{
-        res.status(200).send(data)
-    })
-    .catch(err=>{
-        res.status(500).send(err)
-    })
-}
+
+ 
 
 const save=(req,res)=>{
     var data=req.body;
@@ -93,6 +136,7 @@ module.exports={
     getAll,
     getOne,
     save,
+ 
     replace,
     update,
     remove

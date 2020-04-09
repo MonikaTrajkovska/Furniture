@@ -16,20 +16,9 @@ const Furniture=mongoose.model(
     )
 )
 
-const getAll=()=>{
+const getAll = (q,sort)=>{
     return new Promise((success,fail)=>{
-        Furniture.find({},(err,data)=>{
-            if( err){
-                return fail(err)
-            }
-            return success(data)
-        })
-    })
-}
-
-const getOne=(_id,userID)=>{
-    return new Promise((success,fail)=>{
-        Furniture.find({_id, user_id:userID},(err,data)=>{
+        Furniture.find(q,{},{sort:sort},(err,data)=>{
             if(err){
                 return fail(err)
             }
@@ -37,6 +26,17 @@ const getOne=(_id,userID)=>{
         })
     })
 }
+const getOne = (id, userID) => {
+    return new Promise((success, fail) => {
+        Furniture.findById({ _id: id, user_id: userID }, (err, data) => {
+            if (err) {
+                return fail(err);
+            }
+            return success(data);
+        });
+    });
+};
+
 
 const save=(data)=>{
     return new Promise ((success,fail)=>{
@@ -86,6 +86,7 @@ const remove=(id)=>{
 module.exports={
     getOne,
     getAll,
+   
     save,
     replace,
     remove,

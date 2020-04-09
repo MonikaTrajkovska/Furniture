@@ -25,6 +25,7 @@ api.use(cors())
 
 api.get('/api/v1/furnitures',furnitures.getAll)
  api.get('/api/v1/furnitures/:id', furnitures.getOne);
+ 
  api.post('/api/v1/furnitures/', furnitures.save);
  api.put('/api/v1/furnitures/:id', furnitures.replace);
  api.patch('/api/v1/furnitures/:id', furnitures.update);

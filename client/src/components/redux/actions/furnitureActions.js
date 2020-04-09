@@ -4,10 +4,31 @@ export function getFurnitures(data) {
         payload: data
     }
 }
-
-export function getfiles(uploads) {
+export const deleteItem = (_id) => {
     return {
-        type: 'GET_FILES',
-        payload: uploads
+        type: "DELETE_ITEM",
+        payload: _id
     }
 }
+
+export function editOneItem(_id) {
+    return {
+        type: 'EDIT_ITEMS',
+        payload:
+         _id
+
+    }
+}
+
+
+
+export function Update(furniture) {
+    return {
+        type: 'EDIT_ITEMS',
+        payload:
+            furniture
+
+    }
+
+}
+// a=availableSize.indexOf(name.toUpperCase())>=0

@@ -13,7 +13,7 @@ import Login from './components/Login'
 import FileUpload from './components/FileUpload'
 import store from './components/redux/store'
 import Location from './components/Location'
-
+import Filter from './components/Filter'
 
 
 const app = document.getElementById('root')
@@ -24,6 +24,7 @@ const Routes = () => {
                 <Route exact path='/' component={Home} />
                  <Route exact path='/Probno' component={FileUpload}/> 
                  <Route exact path='/Location' component={Location}/> 
+                 <Route exact path='/Filter' component={Filter}/> 
                 <Route exact path='/About' render={()=>
                 <>
                 <Header />

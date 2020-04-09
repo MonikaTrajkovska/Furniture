@@ -1,5 +1,10 @@
 const initialUserState = {
     furnitures: [],
+    filterProducts:[],
+    name:'',
+    // furniture:null,
+    editItems: {},
+    
 
 
 }
@@ -9,14 +14,24 @@ export function furnitureReducers(state = initialUserState, action) {
         case 'GET_FURNITURES':
             return {
                 ...state,
-                furnitures: action.payload
+                furnitures: action.payload,
+                 filteredItems:action.payload
             }
-            case 'GET_FILES':
-                return {
-                    ...state,
-                    uploads: action.payload
-                }
-        
+            case 'EDIT_ITEMS':
+            console.log(action.payload)
+            return {
+                ...state,
+                furnitures: state.furnitures.filter(furniture => furniture._id !== action.payload)
+
+
+            }
+       
+           
+                case 'UPDATE':
+                    return {
+                        ...state,
+                        Update: action.state
+                    }
                 default:
                     return { ...state }
         }}
