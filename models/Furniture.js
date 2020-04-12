@@ -7,7 +7,7 @@ const Furniture=mongoose.model(
             code:String,
             dimension:String,
             description:String,
-            price:String,
+            price:Number,
             filename:Array,
             sold:String,
             user_id:String,

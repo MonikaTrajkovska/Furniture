@@ -5,6 +5,8 @@
   import store from '../components/redux/store'
   import { connect } from "react-redux";
 import { compareSync } from 'bcryptjs';
+import PropTypes from 'prop-types';
+//import {removeFromCart,addToCart} from './ducks/cart'
 
 
 
@@ -15,10 +17,48 @@ import { compareSync } from 'bcryptjs';
           this.state = {
               query: null,
               furnitures: [],
+              dimension: "",
+              sort: "",
+              
+            //   name:'',
+            //    price:'',
+            //     isInCart:'',
+            //     addToCart:''
           }
       }
+    //   isInCart=(state, props) =>{
+    //     return state.cart.furnitures.indexOf(props.id) !== -1;
+    //   }
   
-  
+    //   handleClick = () => {
+     
+    //     const { id, addToCart, removeFromCart, isInCart } = this.props;
+    //     if (isInCart) {
+    //         removeFromCart(id);
+    //     } else {
+    //         addToCart(id);
+    //     }
+    // }
+    // handleAddToCart = (e, furnitures) => {
+    //     this.setState(state => {
+    //       const furnitures = state.furnitures;
+    //       let productAlreadyInCart = false;
+    
+    //       furnitures.forEach(cp => {
+    //         if (cp.id === furnitures.id) {
+    //           cp.count += 1;
+    //           productAlreadyInCart = true;
+    //         }
+    //       });
+    
+    //       if (!productAlreadyInCart) {
+    //         furnitures.push({ ...furnitures, count: 1 });
+    //       }
+    //       localStorage.setItem("cartItems", JSON.stringify(furnitures));
+    //       return { furnitures: furnitures };
+    //     });
+    //   };
+    
       componentDidMount() {
           this.serachPeople(this.state.query);
       }
@@ -77,12 +117,16 @@ import { compareSync } from 'bcryptjs';
                   let furnitures = data.map((furniture) => {
                       
                       return (
-                        <ul key={furniture._id}>
+                          <React.Fragment>
+                        <ul key={furniture.name}>
                         <li>{furniture.name}</li>
                         <li>{furniture.description}</li>
                               <li>{furniture.code}</li>
                               <li>{furniture.description}</li>
+                              {/* <b>{util.formatCurrency(furniture.price)}</b> */}
                     </ul>
+                   
+                     </React.Fragment>
                       )
                   })
                   this.setState({ furnitures: furnitures });
@@ -92,7 +136,10 @@ import { compareSync } from 'bcryptjs';
       }
   
       render() {
+      //  const { id, addToCart, removeFromCart, isInCart } = this.props;
           return (
+              <div>
+                   
               <form>
                   <input
                       type="text"
@@ -102,10 +149,36 @@ import { compareSync } from 'bcryptjs';
                   />
                   {this.state.furnitures}
               </form>
+             
+              
+              {/* <div className="product__button-wrap">
+              <button
+                  className={this.props.isInCart ? 'btn btn-danger' : 'btn btn-primary'}
+                  onClick={this.handleClick}
+              >
+                  {this.props.isInCart ? 'Remove' : 'Add to cart'}
+              </button>
+          </div> */}
+             {/* <Basket
+              cartItems={this.state.cartItems}
+              handleRemoveFromCart={this.handleRemoveFromCart}
+            /> */}
+          </div>
+  
           )
       }
   }
-  
+//  Filter .propTypes = {
+//     id: PropTypes.number.isRequired,
+//     name: PropTypes.string.isRequired,
+//     price: PropTypes.string,
+   
+//     image: PropTypes.string,
+//     isInCart: PropTypes.bool.isRequired,
+//     addToCart: PropTypes.func.isRequired,
+//     removeFromCart: PropTypes.func.isRequired,
+// }
+
   export default Filter;
 
 //   class Filter extends React.Component {

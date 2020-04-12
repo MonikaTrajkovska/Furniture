@@ -4,6 +4,12 @@ export function getFurnitures(data) {
         payload: data
     }
 }
+export function cartItems(data) {
+    return {
+        type: 'GET_FURNITURE',
+        payload: data
+    }
+}
 export const deleteItem = (_id) => {
     return {
         type: "DELETE_ITEM",
@@ -20,7 +26,14 @@ export function editOneItem(_id) {
     }
 }
 
-
+export function removeFromCart(productId) {
+    return {
+        type: 'CART_REMOVE',
+        payload: {
+            productId
+        }
+    }
+}
 
 export function Update(furniture) {
     return {

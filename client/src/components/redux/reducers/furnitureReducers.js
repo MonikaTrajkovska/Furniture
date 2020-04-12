@@ -17,6 +17,12 @@ export function furnitureReducers(state = initialUserState, action) {
                 furnitures: action.payload,
                  filteredItems:action.payload
             }
+            case 'GET_FURNITURE':
+                return {
+                    ...state,
+                    furnitures: action.payload,
+                     filteredItems:action.payload
+                }
             case 'EDIT_ITEMS':
             console.log(action.payload)
             return {
@@ -25,7 +31,13 @@ export function furnitureReducers(state = initialUserState, action) {
 
 
             }
-       
+
+            function handleCartRemove(state, payload) {
+                return {
+                    ...state,
+                    furnitures: state.furnitures.filter(id => id !== payload.productId)
+                };
+            }
            
                 case 'UPDATE':
                     return {
