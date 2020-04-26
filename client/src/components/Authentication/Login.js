@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import { render } from 'react'
+
 
 
 class Login extends React.Component{
@@ -35,6 +35,8 @@ class Login extends React.Component{
         localStorage.setItem('jwt', res.data.jwt);
         localStorage.setItem('name', res.data.name);
         localStorage.setItem('lastName', res.data.surname);
+        localStorage.setItem('email', res.data.email);
+        localStorage.setItem('_id', res.data.id);
       
       
     })
@@ -56,7 +58,7 @@ render(){
         <input type="password" className="text-field1" id="password" onChange={this.saveValue} />
         <br/>
      
-                            <button className='continue-button' onClick={this.login}>Log in</button>
+                            <button className='continue-button3' onClick={this.login}>Log in</button>
         </div>
         </React.Fragment>
     )

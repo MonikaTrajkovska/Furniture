@@ -1,7 +1,7 @@
 #cf {
     height: 250px;
     width: 450px;
-    margin-top: 190px;
+    margin-top: 80px;
   }
   
   #cf img {
@@ -21,6 +21,13 @@
   .aboutus{
       margin-bottom: 120px;
   } 
+  .marque-slide{
+    margin-top: -32px;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+  }
   #about{
     width: 350px;
     height: 350px;

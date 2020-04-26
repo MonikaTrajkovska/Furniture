@@ -1,9 +1,13 @@
 const initialUserState = {
     furnitures: [],
     filterProducts:[],
-    name:'',
-    // furniture:null,
     editItems: {},
+    editUsers:{},
+    users:[],
+    Update:false,
+    user:null,
+    userName: '',
+    expensesClicked: false,
     
 
 
@@ -31,14 +35,29 @@ export function furnitureReducers(state = initialUserState, action) {
 
 
             }
-
-            function handleCartRemove(state, payload) {
+            case "EXPENSES_CLICKED": {
+                return { ...state, expensesClicked: action.expensesClicked }
+            }
+            case 'GET_USER':
+            return {
+                ...state,
+                users: action.payload,
+               
+            }
+            case 'EDIT_USERS':
+                console.log(action.payload)
                 return {
                     ...state,
-                    furnitures: state.furnitures.filter(id => id !== payload.productId)
-                };
-            }
-           
+                    user: action.payload
+    
+    
+                }
+
+ case "SAVE_USER_NAME": {
+            return { ...state, userName: action.userName }
+        }
+         
+          
                 case 'UPDATE':
                     return {
                         ...state,
@@ -47,3 +66,4 @@ export function furnitureReducers(state = initialUserState, action) {
                 default:
                     return { ...state }
         }}
+        

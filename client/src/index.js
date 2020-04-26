@@ -2,21 +2,31 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Header from './components/Header'
-import Home from './components/Home'
-import About from './components/About'
-import Firstpage from './components/Firstpage'
-import Contact from './components/Contact'
-import Register from './components/Register'
-import SecondRegisterPage from './components/SecondRegisterPage'
-import Login from './components/Login'
-import FileUpload from './components/FileUpload'
+import Header from './components/Navigation/Header'
+import Home from './components/Pages/Home'
+import About from './components/Pages/About'
+import Firstpage from './components/Pages/Firstpage'
+import Contact from './components/Pages/Contact'
+import Register from './components/Authentication/Register'
+import SecondRegisterPage from './components/Authentication/SecondRegisterPage'
+import Login from './components/Authentication/Login'
+// import FileUpload from './components/FileUpload'
 import store from './components/redux/store'
-import Location from './components/Location'
+import Location from './components/Location/Location'
 import Filter from './components/Filter'
-import Basket from './components/Basket'
-import BasketCart from './components/BasketCart'
+import Basket from './components/Products/Basket'
+import BasketCart from './components/Products/BasketCart'
+import Products from './components/Products/Products'
 
+
+
+
+
+ import Input from './components/Input/Input'
+
+
+ import Info from './components/UserInfo/Info'
+ import Head from './components/Head'
 
 const app = document.getElementById('root')
 const Routes = () => {
@@ -24,18 +34,31 @@ const Routes = () => {
         <Router>
             <Switch>
                 <Route exact path='/' component={Home} />
-                 <Route exact path='/Probno' component={FileUpload}/> 
+                 {/* <Route exact path='/Probno' component={FileUpload}/>  */}
                  <Route exact path='/Location' component={Location}/> 
                   <Route exact path='/basket' component={Basket}/> 
                  <Route exact path='/Filter' component={Filter}/> 
                  <Route exact path='/BasketCart' component={BasketCart}/> 
+                 
+                     <Route exact path="/input" component={Input} />
+                     
+                   
+                     <Route exact path="/user-info" render={() => <Info header={Header} />} />
+                    {/* <Route exact path='/user' component={SignOut}/>     */}
                 <Route exact path='/About' render={()=>
                 <>
                 <Header />
                 <About />
             </>
         } />
-            
+        
+                <Route exact path="/Products" render={() =>
+                    <>
+                        <Header />
+                        <Products />
+           
+                    </>
+                } />
             
                 <Route exact path="/Firstpage" render={() =>
                     <>
@@ -63,7 +86,7 @@ const Routes = () => {
                 } /> 
                  <Route exact path="/Login" render={() =>
                     <>
-                        <Header />
+                         <Header /> 
                         <Login /> 
                     </>
                 } /> 

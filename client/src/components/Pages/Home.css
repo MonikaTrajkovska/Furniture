@@ -1,4 +1,7 @@
-
+#welcome{
+  margin-top: 150px;
+    margin-left: -370px;
+}
 
 body{
   background-color:white ;
@@ -14,7 +17,7 @@ body{
   height: 150px;
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 520px;
     height: 100px;
     margin-top: 300px;
     margin-left: 550px;

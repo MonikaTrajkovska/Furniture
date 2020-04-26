@@ -72,6 +72,8 @@ register=(event)=>{
                      localStorage.setItem('jwt',res.data.jwt);
                      localStorage.setItem('name',this.state.name);
                      localStorage.setItem('surname',this.state.surname)
+                     localStorage.setItem('email', res.data.email);
+                     localStorage.setItem('_id',res.data.id)
                  })
                  .catch(err=>{
                      console.log(err)
@@ -108,8 +110,8 @@ register=(event)=>{
                             <br/>
                             <label className='label'>City</label>
                             <input type="text" className="text-field1" id="city" onChange={this.saveValue} />
-                            <Link to="SecondRegisterPage">
-                            <button className='continue-button'>Continue</button></Link>
+                            <Link to="/SecondRegisterPage">
+                            <button className='continue-button' onClick={this.register}>Continue</button></Link>
                             </div>
                     </React.Fragment>
                 )

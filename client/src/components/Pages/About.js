@@ -1,6 +1,6 @@
 import React from 'react'
-import Dinningimage from './assets/images/Dinningimage.JPEG'
-import Table from './assets/images/table.JPEG'
+import Dinningimage from '../assets/images/Dinningimage.JPEG'
+import Table from '../assets/images/table.JPEG'
 // import Clock from './assets/images/clock.JPEG'
 import './About.css'
 import { Link } from 'react-router-dom'
@@ -36,8 +36,8 @@ The company has existed for 25 years and successfully places its products in the
     <ul>
         <li>Switzerland</li>
         <li>Greece</li>
-        <li>Italy</li>
-        <li>Serbia</li>
+        {/* <li>Italy</li>
+        <li>Serbia</li> */}
     </ul>
 
 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 // YOUR_API_KEY='AIzaSyC7ELXTTJ3m8ZM16MnkcnipZzsKodHGAQ8'
- import {YOUR_API_KEY} from '../components/locationconfig.json'
+ import {YOUR_API_KEY} from '../Location/locationconfig.json'
 class Location extends React.Component{
     constructor(props){
     super(props);

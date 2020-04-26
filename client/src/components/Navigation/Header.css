@@ -5,6 +5,7 @@
     width: 100px;
     height: 50px;
 
+  
     
 }
 .firstHeader{
@@ -37,12 +38,15 @@
 #myaccount{
     padding-right: 20px;
 }
-#welcome{
+/* #welcome{
     padding-right: 30px;
-}
+} */
 #logo{
-    margin-left: 80px;
-    margin-top: 15px;
+    margin-left: -450px;
+    margin-top: 45px;
+    height: 38px;
+    padding-top: 15px;
+    padding-left: 10px;;
 }
 .search-container{
     margin-left: 550px;
@@ -64,6 +68,7 @@
   }
   #search{
       padding:10px;
+      border-radius: 5px;
   }
   
  .secondHeader{
@@ -105,7 +110,26 @@
     padding-right: 20px;
     margin-top: 12px;
 }
-.dropdown-content {
+.logOutButton3{
+    background-color: white;
+    height: 30px;
+    min-width: 20px;
+    /* text-transform: uppercase; */
+    /* border-radius: 5px; */
+    /* font-weight: 700; */
+    background: transparent;
+    /* border: 1.5px solid #576574; */
+    color: #576574;
+    padding: 15px 10px 0px 10px;
+  }
+  #profile-image{
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-right: 20px;
+  }
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -133,4 +157,4 @@
   
   .dropdown:hover .dropbtn {background-color: grey;}
 
-  
+   */

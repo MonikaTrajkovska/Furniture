@@ -1,12 +1,12 @@
  import React from 'react';
-// // import {  Form, FormGroup, Input, Container, Row, Col } from 'reactstrap';
- import { getFurnitures, Update,editOneItem} from "../components/redux/actions/furnitureActions";
- import axios from 'axios'
-  import store from '../components/redux/store'
-  import { connect } from "react-redux";
-import { compareSync } from 'bcryptjs';
-import PropTypes from 'prop-types';
-//import {removeFromCart,addToCart} from './ducks/cart'
+// // // import {  Form, FormGroup, Input, Container, Row, Col } from 'reactstrap';
+//  import { getFurnitures, Update,editOneItem} from "../components/redux/actions/furnitureActions";
+//  import axios from 'axios'
+//   import store from '../components/redux/store'
+//   import { connect } from "react-redux";
+// import { compareSync } from 'bcryptjs';
+// import PropTypes from 'prop-types';
+// //import {removeFromCart,addToCart} from './ducks/cart'
 
 
 
@@ -19,7 +19,7 @@ import PropTypes from 'prop-types';
               furnitures: [],
               dimension: "",
               sort: "",
-              
+              name:''
             //   name:'',
             //    price:'',
             //     isInCart:'',
@@ -118,7 +118,7 @@ import PropTypes from 'prop-types';
                       
                       return (
                           <React.Fragment>
-                        <ul key={furniture.name}>
+                        <ul key={furniture.name}> 
                         <li>{furniture.name}</li>
                         <li>{furniture.description}</li>
                               <li>{furniture.code}</li>

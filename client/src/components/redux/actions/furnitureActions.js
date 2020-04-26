@@ -26,6 +26,7 @@ export function editOneItem(_id) {
     }
 }
 
+
 export function removeFromCart(productId) {
     return {
         type: 'CART_REMOVE',
@@ -44,4 +45,3 @@ export function Update(furniture) {
     }
 
 }
-// a=availableSize.indexOf(name.toUpperCase())>=0

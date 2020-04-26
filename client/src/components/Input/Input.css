@@ -1,0 +1,16 @@
+.text-field {
+    background: #fff;
+    border: 1.5px solid #c6c6c6;
+    height: 34px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-bottom: 8.5px;
+    margin-left: 40px;
+    padding: 5px 90px 5px 90px;
+    align-content: center;
+    color: #8d8d8d;
+    margin-top: 15px;
+}
+.text-field-input{
+    margin-left: 40px;
+}

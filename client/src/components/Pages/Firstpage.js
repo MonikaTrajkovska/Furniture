@@ -1,13 +1,17 @@
 import React from 'react'
 import './Firstpage.css'
-import FurniturePicture from './assets/images/FurniturePicture.JPEG'
-import Furniture from './assets/images/furniture.JPEG'
-import Chair from './assets/images/chair.JPEG'
+import FurniturePicture from '../assets/images/FurniturePicture.JPEG'
+import Furniture from '../assets/images/furniture.JPEG'
+import Chair from '../assets/images/chair.JPEG'
+
 // import { Link } from 'react-router-dom'
 const Firstpage =()=>{
     return(
         <React.Fragment>
              <div id="cf">
+             <marquee width="100%" direction="left" height="200px" className='marque-slide'>
+FIND US ON FACEBOOK   <i className="fab fa-facebook-square"></i> MM Furniture
+</marquee>   
   <img className="bottom" src={FurniturePicture} alt='FurniturePicture' />
   <img className="top" src={Furniture} alt='Furniture'/>
 </div>
@@ -51,7 +55,7 @@ Guided by the idea that there is no more luxury than your own home,
        
   
 </div>
-<div class="footer">
+<div className="footer">
   <p>© 2020 MM Furniture. All Rights Reserved. </p>
 </div>    
 

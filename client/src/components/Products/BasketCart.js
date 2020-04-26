@@ -1,13 +1,13 @@
 
 import React, { Component } from 'react';
-import {Link} from "react-router-dom";
+
 import axios from 'axios'
- import store from '../components/redux/store'
+ import store from '../redux/store'
   import { connect } from "react-redux";
-  // import moni from '../../../uploads/moni.jpg'
-import { getFurnitures,Update,cartItems } from "../components/redux/actions/furnitureActions";
-import Basket from '../components/Basket'
-import util from '../components/util'
+
+import { getFurnitures,cartItems } from "../redux/actions/furnitureActions";
+import Basket from '../Products/Basket'
+import util from '../Products/util'
 
 class BasketCart extends Component {
   
