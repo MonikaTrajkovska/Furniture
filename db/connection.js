@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const uri =
-  "mongodb+srv://{username}:{password}@{host}/{dbname}?retryWrites=true&w=majority";
+  "mongodb://{username}:{password}@{host}/{dbname}?retryWrites=true&w=majority";
 
 const init = config => {
   mongoose
