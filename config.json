@@ -1,6 +1,6 @@
 {
     "db": {
-      "host": "ds263638.mlab.com:63638/heroku_b86hcqhq",
+      "host": "cluster0-r2fa9.mongodb.net",
       "dbname": "furniture",
       "username": "dev",
       "password": "DEV123!"
