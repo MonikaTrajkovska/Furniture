@@ -32,5 +32,5 @@ api.listen(process.env.PORT, err => {
         console.log(err);
         return;
     }
-    console.log('server started successfully on port 5000');
+    console.log('server started successfully on port 3000');
 });
