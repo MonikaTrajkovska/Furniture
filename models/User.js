@@ -63,9 +63,9 @@ const getUserPasswordByEmail = email => {
     );
   });
 };
-const getOne = (id ) => {
+const getOne = (_id ) => {
     return new Promise((success, fail) => {
-      User.findById({ _id: id}, (err, data) => {
+      User.findById({ _id: _id}, (err, data) => {
         if (err) {
           return fail(err);
         }

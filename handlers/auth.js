@@ -112,11 +112,11 @@ const confirm = (req, res) => {
   };
   
   const getOne = (req, res) => {
-    mUsers.getOne(req.params.id)
+    mUsers.getOne(req.params._id)
       .then(data => {
         res.status(200).send(data);
          console.log(data);
-        console.log("User-getOne - req.params._id", req.params.id);
+        console.log("User-getOne - req.params._id", req.params._id);
       })
       .catch(err => {
         res.status(500).send(err);
