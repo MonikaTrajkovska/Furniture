@@ -1,18 +1,18 @@
 const express = require('express');
-const app = express();
+const api = express();
 
 const path = require('path');
 
 const cors = require('cors');
-app.use(cors());
+api.use(cors());
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+api.use(express.static(path.join(__dirname, '../client/build')));
 
-app.get("/*", function (req, res) {
+api.get("/*", function (req, res) {
   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 })
 
-app.listen(8083, err => {
+api.listen(8083, err => {
     if(err){
         console.log('could not start server');
         console.log(err);
