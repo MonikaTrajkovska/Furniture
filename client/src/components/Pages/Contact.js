@@ -83,8 +83,8 @@ class Contact extends React.Component {
                     // &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
                     //     &key=${YOUR_API_KEY}}`} alt="" />
                     //     :null
-                      <iframe className="showLocation" width="300" height="250" frameBorder="0" style={{"border":0}}
-                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></iframe>  
+                      <p className="showLocation" width="300" height="250" frameBorder="0" style={{"border":0}}
+                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>  
                   :null
                 }
             </p>
@@ -103,8 +103,8 @@ class Contact extends React.Component {
                     // &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
                     //     &key=${YOUR_API_KEY}}`} alt="" />
                     //     :null
-                      <iframe className="showLocation"width="300" height="250" frameBorder="0" style={{"border":0 }}
-                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></iframe>  
+                      <p className="showLocation"width="300" height="250" frameBorder="0" style={{"border":0 }}
+                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>  
                   :null
                 } 
             
