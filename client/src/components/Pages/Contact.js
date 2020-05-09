@@ -1,6 +1,7 @@
+
 import React from 'react'
 import './Contact.css'
-
+ import {YOUR_API_KEY} from '../Location/locationconfig.json'
 
 class Contact extends React.Component {
     constructor(props){
@@ -73,20 +74,20 @@ class Contact extends React.Component {
              <i class="fas fa-house-damage">Address:{this.state.userAddress} </i> <br/><br/>
             <i class="fas fa-house-damage"></i> Telephone: (+389)02 5118 988;(+389)78 247 724 <br/> <br/>
             <i class="fas fa-envelope-open"></i> E-mail: info@mm.mk <br/> <br/>
-           
-        {/* <button onClick={this.getLocation}>Get coordinates</button>  */}
+{/*            
+         <button onClick={this.getLocation}>Get coordinates</button>   */}
         {this.getLocation() }
             {
                     this.state.latitude && this.state.longitude ?
-                    //  <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
-                    //     &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-                    // &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
-                    //     &key=${YOUR_API_KEY}}`} alt="" />
-                    //     :null
-                      <p className="showLocation" width="300" height="250" frameBorder="0" style={{"border":0}}
-                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>  
-                  :null
-                }
+                     <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
+                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+                    &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
+                        &key=${YOUR_API_KEY}}`} alt="" />
+                        :null
+        }
+                      <iframe className="showLocation" width="300" height="250" frameBorder="0" style={{"border":0}}
+                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></iframe>  
+               
             </p>
             </div>
             <div className='contact1'>
@@ -98,16 +99,16 @@ class Contact extends React.Component {
             {this.getLocation() }
             {
                     this.state.latitude && this.state.longitude ?
-                    //  <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
-                    //     &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-                    // &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
-                    //     &key=${YOUR_API_KEY}}`} alt="" />
-                    //     :null
-                      <p className="showLocation"width="300" height="250" frameBorder="0" style={{"border":0 }}
-                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>  
-                  :null
-                } 
-            
+                     <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
+                        &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+                    &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
+                        &key=${YOUR_API_KEY}}`} alt="" />
+                        :null
+            }
+                      <iframe className="showLocation"width="300" height="250" frameBorder="0" style={{"border":0 }}
+                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></iframe>  
+                  
+
             </p>
              </div>
         </div>

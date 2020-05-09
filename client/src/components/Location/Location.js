@@ -73,18 +73,22 @@ render(){
                 <p>Address:{this.state.userAddress}</p>
                 {
                     this.state.latitude && this.state.longitude ?
-                    //  <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
-                    //     &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
-                    // &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
-                    //     &key=${YOUR_API_KEY}}`} alt="" />
-                    //     :null
+                      <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=13&size=600x300&maptype=roadmap
+                       &markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318
+                   &markers=color:red%7Clabel:C%7C40.718217,-73.998284${this.state.latitude},${this.state.longitude}
+                         &key=${YOUR_API_KEY}}`} alt="" />
+                       :null
+                }
                       <p width="600" height="450" frameBorder="0" style={{"border":0}}
-                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>  
+                      src={`https://www.google.com/maps/embed/v1/place?q=${this.state.latitude},${this.state.longitude}:ChIJCUi8cJ8VVBMRscUfyNZa8uA&key=AIzaSyB40vWeXd8m18074oE5odeZ4OhpY2h59qI`} allowFullScreen></p>
+                     
                   :null
                 }
+                
             </div>
+            
         </React.Fragment>
-    )
+)
 }
 }
 export default Location

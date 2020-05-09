@@ -1,1 +1,1 @@
-web: node services/auth.js & node services/furnitures.js  & node services/proxy.js  & node services/client.js
+web: node services/auth.js & node services/furnitures.js  
